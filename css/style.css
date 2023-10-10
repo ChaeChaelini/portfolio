@@ -1,0 +1,471 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+    width: 100%;
+    max-width: 90rem;
+    /* height: 359.25rem; */
+    background: linear-gradient(
+        180deg,
+        #fffffe 0%,
+        #fff 45.31%,
+        #fff 57.81%,
+        #fffffe 100%
+    );
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    /* width: 100%; */
+    height: 10rem;
+    flex-shrink: 0;
+    align-items: center;
+    padding: 0 5rem;
+}
+
+.logo {
+    width: 3.6875rem;
+    height: 5.5625rem;
+    flex-shrink: 0;
+    background-image: url(../image/image01.png);
+    background-repeat: no-repeat;
+    /* margin-left: 9.38rem;
+    margin-right: 13.5rem; */
+}
+
+.menu_wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.menu {
+    color: #333;
+    font-family: Pretendard;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.menu:hover {
+    color: #17aa9d;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+/* --------//header */
+
+.banner_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6.94rem;
+}
+
+.profile {
+    width: 29.3125rem;
+    height: 43.5625rem;
+    flex-shrink: 0;
+}
+
+.box_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7rem;
+}
+
+.textbox1 {
+    display: flex;
+    width: 27.75rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.8rem;
+    flex-shrink: 0;
+}
+
+.text1 {
+    color: #999;
+    font-family: Pretendard;
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.text2 {
+    color: #555;
+    font-family: Pretendard;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.big {
+    color: #17aa9d;
+    font-family: Pretendard;
+    font-size: 3.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.bold {
+    color: #333;
+    font-family: Pretendard;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.buttonbox_wrap {
+    display: flex;
+    width: 27.75rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    display: flex;
+    padding: 1.4375rem 1.875rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 2.1875rem;
+    border: 4px solid #17aa9d;
+    background: #fff;
+    color: #17aa9d;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.btn:hover {
+    display: flex;
+    padding: 1.4375rem 1.875rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 2.1875rem;
+    background: #17aa9d;
+    color: #fff;
+    transition: all 0.5s;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+}
+
+/* -------------//banner */
+
+.contents_wrap {
+    display: flex;
+    width: 90rem;
+    /* height: 283.4375rem; */
+    /* justify-content: center; */
+    padding: 6.25rem 0rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 12.5rem;
+    flex-shrink: 0;
+}
+
+.textbox2 {
+    display: flex;
+    width: 59.375rem;
+    height: 6.9375rem;
+    padding: 2.5rem 0rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 2.5rem;
+    border: 1px solid #17aa9d;
+    gap: 1.2rem;
+}
+
+.textbox2 p:nth-child(1) {
+    color: #777;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.textbox2 p:nth-child(2) {
+    color: #aaa;
+    font-family: Pretendard;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.textbox2 p:nth-child(3) {
+    color: #777;
+    font-family: Pretendard;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+/* 민수 */
+.about_section {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 2rem;
+}
+.about_content_wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.about_content_sm {
+    width: 5rem;
+    color: #898989;
+    text-align: justify;
+    font-family: Pretendard;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 0.875rem;
+}
+.about_content_big {
+    color: #555;
+    font-family: Pretendard;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.tg {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.about_title {
+    color: #17aa9d;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.about_content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.textbox_about {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.88rem;
+}
+
+.box1 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.25rem;
+}
+
+.box1:nth-child(4) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+h1 {
+    color: #555;
+    font-family: Pretendard;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.box_title {
+    display: flex;
+    width: 4.5625rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    color: #17aa9d;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.box_content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.62rem;
+}
+
+.box_content_sm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.7rem;
+    color: #898989;
+    text-align: justify;
+    font-family: Pretendard;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 0.875rem;
+}
+
+.box_content_big {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.4rem;
+    color: #555;
+    font-family: Pretendard;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.box_content_big_col {
+    display: flex;
+    flex-direction: row;
+    gap: 1.6rem;
+    color: #555;
+    font-family: Pretendard;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.125rem;
+    align-self: stretch;
+}
+
+/* -------//contents */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contact_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.875rem;
+    align-self: stretch;
+}
+
+.contactbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.contactbox p {
+    color: #666;
+    text-align: right;
+    font-family: Pretendard;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150.523%;
+}
+
+.contactbox p:hover {
+    color: #17aa9d;
+}
+
+.contactbox a {
+    color: #666;
+    text-decoration: none;
+}
+
+.contactbox a:hover {
+    cursor: pointer;
+    color: #17aa9d;
+}
+
+.textbox3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    width: 90rem;
+    height: 9.8125rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.textbox3 p:nth-child(1) {
+    color: #555;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150.523%;
+    /* 1.88156rem */
+}
+
+.textbox3 p:nth-child(2) {
+    color: #555;
+    font-family: Pretendard;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 150.523%;
+}
+
+/* -------//footer */
