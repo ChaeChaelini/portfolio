@@ -3,6 +3,34 @@
     padding: 0;
 }
 
+html {
+    cursor: none;
+}
+
+section {
+    cursor: none;
+    cursor: default;
+    width: 100%;
+    height: 100vh;
+}
+
+.cursor {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    user-select: none;
+    pointer-events: none;
+    z-index: 9999999;
+}
+
+#cursor_star {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50px;
+    left: 30px;
+}
+
 .wrap {
     width: 100%;
     max-width: 90rem;
@@ -55,7 +83,7 @@ header {
 .menu:hover {
     color: #17aa9d;
     transition: all 0.5s;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 /* --------//header */
@@ -77,7 +105,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 7rem;
+    gap: 4rem;
 }
 
 .textbox1 {
@@ -97,6 +125,7 @@ header {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    letter-spacing: 0.00938rem;
 }
 
 .text2 {
@@ -115,15 +144,20 @@ header {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    letter-spacing: 0.11563rem;
 }
 
 .bold {
     color: #333;
     font-family: Pretendard;
-    font-size: 2.5rem;
-    font-style: normal;
+    font-size: 3.125rem;
     font-weight: 600;
     line-height: normal;
+    letter-spacing: 1.543rem;
+}
+
+.text2_2 {
+    letter-spacing: 0.4rem;
 }
 
 .buttonbox_wrap {
@@ -168,7 +202,7 @@ header {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 /* -------------//banner */
@@ -390,8 +424,82 @@ h1 {
     justify-content: center;
     align-items: center;
     gap: 3.125rem;
-    align-self: stretch;
 }
+
+#gallery {
+    width: 100%;
+    height: 45rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#mainVisual {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    align-content: center;
+}
+
+#mainVisual ul li {
+    position: absolute;
+    width: 100%;
+    height: 40rem;
+    background-size: cover;
+    background-position: center;
+}
+
+/* //글씨제거 */
+#mainVisual ul li a,
+.btnList li a {
+    display: block;
+    text-indent: -99999rem;
+}
+
+#mainVisual ul li.visual_0 {
+    background: url(../image/1697076763725.jpg) 50% no-repeat;
+    left: 0;
+    /* padding: 2rem; */
+}
+
+#mainVisual ul li.visual_1 {
+    background: url(../image/1697076763814.jpg) 50% no-repeat;
+    left: 100%;
+    /* padding: 2rem; */
+}
+
+#mainVisual ul li.visual_2 {
+    background: url(../image/1697076764056.jpg) 50% no-repeat;
+    left: 200%;
+    /* padding: 2rem; */
+}
+
+/* btnList */
+/* .btnList {
+    display: flex;
+    row-gap: 2rem;
+    column-gap: 1rem;
+    position: relative;
+    left: 50%;
+    top: 13.5rem;
+    width: 50%;
+    overflow: hidden;
+} */
+
+/* .btnList li {
+    background: url(./img/btnVisual.png) 0 -16px no-repeat;
+    width: 14px;
+    height: 15px;
+    overflow: hidden;
+} */
+
+/* .btnList li.on {
+    background-position: 0 0;
+} */
 
 /* -------//contents */
 
@@ -406,11 +514,11 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1.875rem;
-    align-self: stretch;
+    align-self: stretch
 }
 
 .contactbox {
+    width: 20rem;
     display: flex;
     flex-direction: column;
     align-items: center;
