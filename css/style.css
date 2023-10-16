@@ -458,7 +458,7 @@ h1 {
 .row_text {
     display: flex;
     flex-direction: row;
-    width: 15rem;
+    width: 18.5rem;
     justify-content: space-between;
     align-items: center;
 }
