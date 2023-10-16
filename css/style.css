@@ -155,6 +155,20 @@ header {
     font-weight: 600;
     line-height: normal;
     letter-spacing: 0.11563rem;
+
+}
+
+.big:hover {
+    transition: .5s linear;
+    margin: 0 0.2rem;
+    color: #fff;
+    text-shadow: 0 0 10px #17aa9d,
+        0 0 20px #fff,
+        0 0 40px #fff;
+}
+
+.big:hover::after {
+    content: "";
 }
 
 .bold {
