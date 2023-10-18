@@ -28,7 +28,10 @@ body::-webkit-scrollbar-button {
     border: 3px solid #17AA9D;
     box-shadow: 1px 1px 3px #666;
 }
+
 /*----- scrollbar */
+
+
 
 section {
     cursor: none;
@@ -37,32 +40,10 @@ section {
     height: 100vh;
 }
 
-.cursor {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    user-select: none;
-    pointer-events: none;
-    z-index: 9999999;
-}
-
-#cursor_star {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: 50px;
-    left: 30px;
-}
-
 .wrap {
     width: 100%;
     max-width: 90rem;
-    /* height: 359.25rem; */
-    /* background: linear-gradient(180deg,
-            #fffffe 0%,
-            #fff 45.31%,
-            #fff 57.81%,
-            #fffffe 100%); */
+
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -70,17 +51,14 @@ section {
 
 header {
     display: flex;
-    justify-content: space-between;
-    /* width: 100%; */
-    height: 10rem;
+    width: 100vw;
+    height: 7rem;
     flex-shrink: 0;
     align-items: center;
-    padding: 0 5rem;
-    background: linear-gradient(180deg,
-            #fffffe 0%,
-            #fff 45.31%,
-            #fff 57.81%,
-            #fffffe 100%);
+    padding: 0 10rem;
+    background-color: #fff;
+    position: fixed;
+    gap: 13.5rem;
 }
 
 .logo {
@@ -89,8 +67,6 @@ header {
     flex-shrink: 0;
     background-image: url(../image/image01.png);
     background-repeat: no-repeat;
-    /* margin-left: 9.38rem;
-    margin-right: 13.5rem; */
 }
 
 .menu_wrap {
@@ -111,10 +87,42 @@ header {
 .menu:hover {
     color: #17aa9d;
     transition: all 0.5s;
-    /* cursor: pointer; */
+    cursor: pointer;
 }
 
 /* --------//header */
+
+
+.sideNav {
+    width: 8rem;
+    position: fixed;
+    top: 50%;
+    right: 0.5%;
+    z-index: 999;
+}
+
+.sideNav a {
+    display: inline-block;
+    padding: 1em;
+    border: 3px solid #17aa9d;
+    border-radius: 3rem;
+    background: #fff;
+    color: #17aa9d;
+    margin-bottom: 3em;
+
+}
+
+.sideNav li.on a:before {
+    background: #17aa9d;
+    color: #fff;
+}
+
+
+
+/*------//.sideNav*/
+main {
+    margin-top: 8rem;
+}
 
 .banner_wrap {
     display: flex;
@@ -623,7 +631,7 @@ h1 {
     transition: all 0.5s;
 }
 
-#gallery {
+.gallery {
     width: 100%;
     height: 45rem;
     display: flex;
