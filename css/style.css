@@ -9,6 +9,26 @@
 /* html {
     cursor: none;
 } */
+body::-webkit-scrollbar {
+    width: 1rem;
+    background-color: white;
+    border: 3px solid #17AA9D;
+}
+
+body::-webkit-scrollbar-thumb {
+    width: 1rem;
+    height: 1rem;
+    background: #17AA9D;
+}
+
+body::-webkit-scrollbar-button {
+    width: 2rem;
+    height: 2rem;
+    /* background-color: #17AA9D; */
+    border: 3px solid #17AA9D;
+    box-shadow: 1px 1px 3px #666;
+}
+/*----- scrollbar */
 
 section {
     cursor: none;
@@ -173,6 +193,7 @@ header {
 .big:hover::after {
     content: "";
 }
+
 
 .bold {
     color: #333;
