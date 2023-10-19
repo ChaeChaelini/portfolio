@@ -50,6 +50,7 @@ section {
 }
 
 header {
+    z-index: 999;
     display: flex;
     width: 100vw;
     height: 7rem;
@@ -525,7 +526,80 @@ h1 {
     justify-content: center;
     align-items: center;
     gap: 13rem;
+    position: relative;
+
 }
+
+/* ---------------------project_img */
+
+.project .project_wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.project .item {
+    position: absolute;
+    top: 0;
+    height: 30%;
+}
+
+.project .item.left {
+    width: 60%;
+    transition: left 1s ease-in-out;
+    left: -100%;
+    left: 0%;
+}
+
+.project.is-animated .left {
+    left: 0 !important;
+}
+
+.project .item.right {
+    width: 40%;
+    top: 10rem;
+    right: 4rem;
+    align-items: baseline;
+}
+
+.left .mockup img,
+.left .mockup .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.left .mockup.pc {
+    position: relative;
+    width: 60%;
+    height: 100%;
+    margin-left: 100px;
+    z-index: 6;
+}
+
+.screen,
+.device {
+    width: 100%;
+}
+
+.screen {
+    z-index: 1;
+}
+
+.device {
+    z-index: 2;
+}
+
+.project .mockup.pc .mask {
+    z-index: 99;
+    width: 22.8vw;
+    height: 61.8%;
+    /* overflow: hidden; */
+    left: 8.2%;
+    margin-top: 3rem;
+}
+
+/*--------------------------------------project_img */
 
 .project_item {
     display: flex;
