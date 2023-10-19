@@ -56,10 +56,12 @@ header {
     height: 7rem;
     flex-shrink: 0;
     align-items: center;
-    padding: 0 10rem;
-    background-color: #fff;
+    justify-content: center;
+    /* padding: 0 10rem; */
+    background-color: rgba( 255, 255, 255, 0.2 );
     position: fixed;
     gap: 13.5rem;
+    top:0;
 }
 
 .logo {
@@ -541,25 +543,24 @@ h1 {
 .project .item {
     position: absolute;
     top: 0;
-    height: 30%;
+    height: 30vw;
 }
 
 .project .item.left {
     width: 60%;
     transition: left 1s ease-in-out;
     left: -100%;
-    left: 0%;
 }
 
-.project.is-animated .left {
-    left: 0 !important;
+.project.is-animated .item.left {
+    left: 0%;
+    transition: left 2s ease-in-out;
 }
 
 .project .item.right {
     width: 40%;
-    top: 10rem;
-    right: 4rem;
-    align-items: baseline;
+    right :0
+    /* align-items: baseline; */
 }
 
 .left .mockup img,
@@ -574,7 +575,7 @@ h1 {
     width: 60%;
     height: 100%;
     margin-left: 100px;
-    z-index: 6;
+    
 }
 
 .screen,
@@ -583,20 +584,20 @@ h1 {
 }
 
 .screen {
-    z-index: 1;
+    z-index: 3;
 }
 
 .device {
-    z-index: 2;
+    z-index: 4;
 }
 
 .project .mockup.pc .mask {
-    z-index: 99;
-    width: 22.8vw;
+    z-index:8;
+    width: 32.3vw;
     height: 61.8%;
-    /* overflow: hidden; */
+    overflow: hidden;
     left: 8.2%;
-    margin-top: 3rem;
+    top: 6%;
 }
 
 /*--------------------------------------project_img */
