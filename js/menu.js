@@ -81,7 +81,7 @@ win.on('scroll', () => {
 
 
 function pipScroll(params) {
-    const devices = ['.mockup.pc'];
+    const devices = ['.mockup.pc', '.mockup.mobile', '.mockup.tablet'];
 
     $.each(devices, function (i, deviceEl) {
         console.log(deviceEl);
@@ -94,6 +94,11 @@ function pipScroll(params) {
             mouseenter: function () {
                 if (project.hasClass('is-animated')) {
                     screen.stop().animate({ top: -hightDifference }, 1000);
+                }
+            },
+            mouseleave: function () {
+                if (project.hasClass('is-animated')) {
+                    screen.stop().animate({ top: 0 }, 1000);
                 }
             },
             mouseleave: function () {
