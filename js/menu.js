@@ -1,3 +1,4 @@
+// -----------------[menu]---------------------//
 const win = $(window);
 const gnb = $('.menu_wrap div');
 const sections = $('.section');
@@ -49,14 +50,14 @@ win.on('scroll', function () {
 let speed = Math.floor(win.height() * 0.5);
 let topArr = [];
 let winSCT;
-
+//------------------------------------[project]--------------------------------------------------// 
 
 const project = $('.project');
 //sections.offsetTop
 project.each(function (i, o) {
     const sectionTop = $(o).offset().top;
     topArr.push(sectionTop)
-}) 
+})
 win.on('scroll', () => {
     winSCT = win.scrollTop();
     if (winSCT > topArr[0] && winSCT < topArr[1]) {
@@ -73,7 +74,7 @@ win.on('scroll', () => {
     }
     if (winSCT > topArr[3] - speed) {
         project.eq(3).addClass('is-animated').siblings().removeClass('is-animated');
-        pipScroll();   
+        pipScroll();
     }
 
 });
@@ -81,7 +82,7 @@ win.on('scroll', () => {
 
 function pipScroll(params) {
     const devices = ['.mockup.pc'];
-    
+
     $.each(devices, function (i, deviceEl) {
         console.log(deviceEl);
         const device = $(deviceEl);
@@ -96,8 +97,7 @@ function pipScroll(params) {
                 }
             },
             mouseleave: function () {
-                if (project.hasClass('is-animated'))
-                {
+                if (project.hasClass('is-animated')) {
                     screen.stop().animate({ top: 0 }, 1000);
                 }
             }
@@ -108,3 +108,48 @@ function pipScroll(params) {
 win.on('resize', function () {
     pipScroll();
 });
+
+// --------------------------[skills]-----------------------------------------//
+$(function () {
+    const progressWrap = $('.progress-bar');
+    //animationOST =animation offset top 줄임 
+    const animationOST = $('.animation').offset().top - 600;
+    let isAni = false;
+    $(window).on('scroll', function () {
+        // 윈도우의 스크롤 탑값이 animationOST값보다 크거나 같고 isAni의 값이 flase 면 조건문 실행 => 윈도우의 스크롤 바가 스킬바섹션 안으로 진입했고 애니메이션은 미실행 상태
+        if ($(window).scrollTop() >= animationOST && !isAni) {
+            progressAnimation();
+        }
+    });
+    function progressAnimation() {
+        // i=인덱스번호, o=인덱스요소
+        progressWrap.each(function (i, o) {
+            const $this = $(this);
+            const progressBar = $this.find('.bar');
+            const progressText = $this.find('.rate');
+            const progressRate = progressText.attr('data-rate')//%의값
+            console.log(progressRate);
+            progressBar.stop().animate({ width: progressRate + '%' }, 2500);//''하고 단위붙여주기!
+
+            const textFn = function () {
+                $({ rate: 0 })
+                    .stop()
+                    .animate(
+                        { rate: progressRate },
+                        {
+                            duration: 2000,
+                            progress: function () {
+                                let now = this.rate;
+                                progressText.text(Math.floor(now) + '%');
+                            },
+                            complete: function () {
+                                isAni = true;//현재 진행하는 에니메이션이 트루인지 아닌지알아보는 함수
+                            }
+                        }
+                    );
+            };//textFn은 익명함수
+            textFn();//익명함수는 호출한 바깥쪽에서 적어야보인다
+        })
+
+    }
+});//jQuery
