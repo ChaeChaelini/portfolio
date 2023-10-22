@@ -55,7 +55,7 @@ header {
   height: 7rem;
   align-items: center;
   justify-content: space-between;
-  padding: 0rem 1rem;
+  padding: 0rem 3rem;
   top: 0;
   background-color: rgba(255, 255, 255, 0.7);
   position: sticky;
@@ -93,7 +93,7 @@ header {
   height: 100vh;
   position: fixed;
   top: 40%;
-  right: 0.5%;
+  right: -4%;
   z-index: 999;
 }
 
@@ -118,6 +118,7 @@ main {
 }
 
 .banner_wrap {
+  padding-bottom: 5rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -257,7 +258,7 @@ main {
   width: 100%;
   /* height: 283.4375rem; */
   /* justify-content: center; */
-  padding: 6.25rem 0rem;
+  /* padding: 6.25rem 0rem; */
   flex-direction: column;
   align-items: center;
   gap: 12.5rem;
@@ -327,7 +328,9 @@ main {
   width: 100%;
   gap: 2rem;
 }
-
+.about_section:last-child {
+  align-items: center;
+}
 .about_content_wrap {
   display: flex;
   flex-direction: column;
@@ -353,7 +356,16 @@ main {
   font-weight: 400;
   line-height: normal;
 }
-
+.tg > .about_content_big {
+  border: 2px solid #17aa9d;
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+}
+.tg > .about_content_big:hover {
+  background-color: #17aa9d;
+  color: #fff;
+  transition: all 0.5s;
+}
 .tg {
   display: flex;
   flex-direction: row;
@@ -549,45 +561,41 @@ h1 {
 .project {
   display: flex;
   width: 100%;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 13rem;
-  position: relative;
+  /* gap: 4rem; */
 }
 
 /* ---------------------project_img */
-
-.section5 {
+/*  */
+.project .project_wrap {
   position: relative;
-}
-
-.section5 .container {
-  position: relative;
-  /* absolute를 제어하는 relative 는 꼭 크기를 넣을것 */
   width: 100%;
   height: 100%;
 }
 
-.section5 .item {
+.project .item {
   position: absolute;
   top: 0;
   height: 30vw;
 }
 
-.section5 .item.left {
+.project .item.left {
   width: 60%;
   transition: left 1s ease-in-out;
   left: -100%;
 }
 
-.section5.is-animated .item.left {
+.project.is-animated .item.left {
   left: 0%;
   transition: left 2s ease-in-out;
 }
 
-.section5 .item.right {
+.project .item.right {
   width: 40%;
   right: 0;
+  /* align-items: baseline; */
 }
 
 .left .mockup img,
@@ -615,16 +623,6 @@ h1 {
 
 .device {
   z-index: 4;
-}
-
-.section5 .mockup.pc .mask {
-  z-index: 8;
-  /* 수정 */
-  width: 28.3vw;
-  height: 68.6%;
-  overflow: hidden;
-  left: 8%;
-  top: 8.7%;
 }
 
 /* tablet */
@@ -728,20 +726,21 @@ h1 {
 
 .project .mockup.pc .mask {
   z-index: 8;
-  width: 32.3vw;
-  height: 61.8%;
+  width: 33.1vw;
+  height: 53.7%;
   overflow: hidden;
-  left: 8.2%;
-  top: 6%;
+  left: 8%;
+  top: 6.7%;
 }
 
 /*--------------------------------------project_img */
 
 .project_item {
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  height: 47rem;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   gap: 1.875rem;
   align-self: stretch;
 }
@@ -851,73 +850,198 @@ h1 {
   gap: 1rem;
 }
 
-#mainVisual {
+/* 목업부분 */
+.mockupbox {
+  width: 50%;
+  height: 100%;
+  /* overflow: auto; */
+  position: relative;
+}
+.mockup {
+  overflow: hidden;
+  position: relative;
+}
+
+.pc {
+  position: absolute;
+  top: 24%;
+  left: 12%;
+  width: 80%;
+  height: 77%;
+  overflow: hidden;
+  z-index: 1;
+}
+.tablet {
+  position: absolute;
+  top: 42%;
+  left: 70%;
+  width: 27%;
+  height: 72%;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.mobile {
+  position: absolute;
+  top: 45%;
+  left: 3.8rem;
+  width: 17%;
+  height: 61%;
+  overflow: hidden;
+  z-index: 3;
+}
+.pj3 {
+  position: absolute;
+  left: 37%;
+  top: 24%;
+  width: 29%;
+  height: 100%;
+}
+.pc .mask {
+  position: absolute;
+  top: 7%;
+  width: 98%;
+  left: 1%;
+  height: 80%;
+  overflow: hidden;
+}
+.tablet .mask {
+  position: absolute;
+  top: 2.1%;
+  width: 88%;
+  left: 6%;
+  height: 42.3%;
+  overflow: hidden;
+}
+.mobile .mask {
+  position: absolute;
+  top: 6.7%;
+  width: 85.2%;
+  left: 7.8%;
+  height: 37.3%;
+  overflow: hidden;
+}
+.mask_screen {
+  width: 100%;
+  overflow: auto;
+}
+.device {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.screen {
+  z-index: 100;
+  position: relative;
   width: 100%;
   height: 100%;
+}
+
+.textbox_wrap1 {
   display: flex;
-  position: relative;
-  overflow: hidden;
-  align-content: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1.875rem;
 }
 
-#mainVisual ul li {
-  position: absolute;
+.textbox_wrap2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.875rem;
+  align-self: stretch;
+}
+
+.title_sm {
+  color: #17aa9d;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.title_b {
+  color: #333;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.list_wrap {
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  color: #666;
+  font-family: Pretendard;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2.67rem;
+}
+
+.button_wrap {
+  width: 26rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.625rem;
+}
+
+.button {
+  display: flex;
+  padding: 1.4375rem 1.875rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 2.1875rem;
+  border: 3px solid #17aa9d;
+  background: #fff;
+  color: #17aa9d;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.button:hover {
+  display: flex;
+  padding: 1.4375rem 1.875rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  color: #fff;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 2.1875rem;
+  background: #17aa9d;
+  transition: all 0.5s;
+}
+
+.gallery {
   width: 100%;
-  height: 40rem;
-  background-size: cover;
-  background-position: center;
+  height: 45rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
-/* //글씨제거 */
-#mainVisual ul li a,
-.btnList li a {
-  display: block;
-  text-indent: -99999rem;
-}
-
-#mainVisual ul li.visual_0 {
-  background: url(../image/1697076763725.jpg) 50% no-repeat;
-  left: 0;
-  /* padding: 2rem; */
-}
-
-#mainVisual ul li.visual_1 {
-  background: url(../image/1697076763814.jpg) 50% no-repeat;
-  left: 100%;
-  /* padding: 2rem; */
-}
-
-#mainVisual ul li.visual_2 {
-  background: url(../image/1697076764056.jpg) 50% no-repeat;
-  left: 200%;
-  /* padding: 2rem; */
-}
-
-/* btnList */
-/* .btnList {
-    display: flex;
-    row-gap: 2rem;
-    column-gap: 1rem;
-    position: relative;
-    left: 50%;
-    top: 13.5rem;
-    width: 50%;
-    overflow: hidden;
-} */
-
-/* .btnList li {
-    background: url(./img/btnVisual.png) 0 -16px no-repeat;
-    width: 14px;
-    height: 15px;
-    overflow: hidden;
-} */
-
-/* .btnList li.on {
-    background-position: 0 0;
-} */
-
-/* -------//contents */
-
+/*  */
 footer {
   display: flex;
   flex-direction: column;
