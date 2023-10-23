@@ -1073,11 +1073,6 @@ h1 {
   gap: 1rem;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
 li {
   list-style: none;
 }
@@ -1091,10 +1086,8 @@ li {
 .slide_wrapper {
   position: relative;
   width: 660px;
-  /* overflow: hidden; */
   padding-top: 200px;
   margin: auto;
-  /* background-color: bisque; */
 }
 
 .slides {
@@ -1154,20 +1147,12 @@ li {
 }
 
 .controls span {
-  /* background: #be8856;
-  color: #fff; */
   padding: 10px 20px;
   margin: 0 10px;
   display: inline-block;
   cursor: pointer;
 }
 
-/* .pager {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  font-size: 2em;
-} */
 .pager {
   margin: auto;
   width: 10rem;
