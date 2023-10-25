@@ -3,14 +3,13 @@ const win = $(window);
 const gnb = $(".menu_wrap div");
 const sections = $(".section");
 const sideNav = $(".sideNav li");
-console.log(gnb);
+
 gnb.on({
   click: function (e) {
     e.preventDefault();
     let tg = $(this);
     let index = tg.index();
     let section = sections.eq(index);
-    console.log(1);
 
     let offset = section.offset().top - 150;
     $("html,body").stop().animate({ scrollTop: offset }, 1000, "easeOutCirc");
@@ -23,7 +22,6 @@ sideNav.on({
     let tg = $(this);
     let index = tg.index();
     let section = sections.eq(index);
-    console.log(section);
     let offset = section.offset().top;
     $("html,body").stop().animate({ scrollTop: offset }, 1000, "easeOutCirc");
   },
@@ -81,12 +79,12 @@ function pipScroll(params) {
   const devices = [".mockup.pc", ".mockup.mobile", ".mockup.tablet"];
 
   $.each(devices, function (i, deviceEl) {
-    console.log(deviceEl);
+
     const device = $(deviceEl);
     const screen = device.find(".screen");
     const mask = device.find(".mask");
     const hightDifference = screen.innerHeight() - mask.innerHeight();
-    console.log(hightDifference);
+    // console.log(hightDifference);
     device.on({
       mouseenter: function () {
         if (project.hasClass("is-animated")) {
@@ -129,7 +127,7 @@ $(function () {
       const progressBar = $this.find(".bar");
       const progressText = $this.find(".rate");
       const progressRate = progressText.attr("data-rate"); //%의값
-      console.log(progressRate);
+      // console.log(progressRate);
       progressBar.stop().animate({ width: progressRate + "%" }, 2500); //''하고 단위붙여주기!
 
       const textFn = function () {
@@ -174,40 +172,40 @@ let responseWidth;
 
 //페이저버튼
 slide.each(function (i) {
-    pagerHTML += `<a href="#">${i + 1}`;
+  pagerHTML += `<a href="#">${i + 1}`;
 });
 pager.html(pagerHTML);
 
 pager.find('a').on('click', function (e) {
-    e.prevenDefault();
-    let i = $(this).index();
-    moveSlideCb(i);
+  e.prevenDefault();
+  let i = $(this).index();
+  moveSlideCb(i);
 });
 
 //슬라이드 복제함수
 cloneSlide();
 function cloneSlide() {
-    //:after
-    slides.append(slide.clone().addClass('clone'));
-    //:before
-    slides.prepend(slide.clone().addClass('clone'));
+  //:after
+  slides.append(slide.clone().addClass('clone'));
+  //:before
+  slides.prepend(slide.clone().addClass('clone'));
 }
 
 //슬라이드 배치함수
 slideLayout(slideWidth, slideGap);
 function slideLayout(sw, sm) {
-    //li 가로배치
-    newSlides = $('.slide_wrapper li');
-    moveAmt = sw + sm;
-    newSlides.each(function (idx) {
-        $(this).css({ left: moveAmt * idx + 'px', width: sw + 'px' });
-    });
+  //li 가로배치
+  newSlides = $('.slide_wrapper li');
+  moveAmt = sw + sm;
+  newSlides.each(function (idx) {
+    $(this).css({ left: moveAmt * idx + 'px', width: sw + 'px' });
+  });
 }
 //ul 중앙정렬함수
 setSlidePos()
 function setSlidePos() {
-    const ulMoveAmt = - moveAmt * slideCount;
-    slides.css({ transform: `translateX(${ulMoveAmt}px)` });
+  const ulMoveAmt = - moveAmt * slideCount;
+  slides.css({ transform: `translateX(${ulMoveAmt}px)` });
 }
 //autoPlay 함수
 //이동함수
@@ -232,67 +230,83 @@ let timer = undefined;
 autoSlide();
 
 function autoSlide() {
-    timer = setInterval(() => {
-        moveSlideCb(currentIdx + 1);
-    }, 1000);
+  timer = setInterval(() => {
+    moveSlideCb(currentIdx + 1);
+  }, 1000);
 }
 function stopSlide() {
-    clearInterval(timer);
-    timer = undefined;
+  clearInterval(timer);
+  timer = undefined;
 }
 
 function moveSlideCb(n) {
-    //ㄱㅖ속 끊기지않고 실행되게 하는부분
-    if (slides.is(':animated')) {
-        return;
-    }
-    slides.stop().animate({ left: moveAmt * -n }, 800,
-        function () {
-            if (currentIdx > slideCount) {
-                slides.css('left', 0);
-                currentIdx = 0;
-            } else if (currentIdx < -(slideCount - 1)) {
-                slides.css('left', -moveAmt * slideCount)
-                currentIdx = slideCount;
-            }
-        });
-    currentIdx = n;
-    console.log(currentIdx);
-    console.log(slideCount);
+  //ㄱㅖ속 끊기지않고 실행되게 하는부분
+  if (slides.is(':animated')) {
+    return;
+  }
+  slides.stop().animate({ left: moveAmt * -n }, 800,
+    function () {
+      if (currentIdx > slideCount) {
+        slides.css('left', 0);
+        currentIdx = 0;
+      } else if (currentIdx < -(slideCount - 1)) {
+        slides.css('left', -moveAmt * slideCount)
+        currentIdx = slideCount;
+      }
+    });
+  currentIdx = n;
+  // console.log(currentIdx);
+  // console.log(slideCount);
 }
 
 //이벤트핸들러 작성
 slideWrapper.on({
-    mouseenter: function () { stopSlide() },
-    mouseleave: function () { autoSlide() },
+  mouseenter: function () { stopSlide() },
+  mouseleave: function () { autoSlide() },
 });
 
 nextBtn.on('click', function () {
-    moveSlideCb(currentIdx + 1);
+  moveSlideCb(currentIdx + 1);
 });
 prevBtn.on('click', function () {
-    moveSlideCb(currentIdx - 1);
-    console.log(currentIdx);
+  moveSlideCb(currentIdx - 1);
+  // console.log(currentIdx);
 });
 
 
 
 //반응형함수
 $(window).resize(function () {
-    let winWidth = $(this).width();
-    console.log(winWidth);
-    if (winWidth < 900) {
-        responsiveGap = 10;
+  let winWidth = $(this).width();
+  // console.log(winWidth);
+  if (winWidth < 900) {
+    responsiveGap = 10;
 
-        responseWidth = slides.width() - (responsiveGap * (maxSlides - 1)) / maxSlides;
-    } else {
-        responseWidth = slideWidth;
-        responsiveGap = slideGap;
-    }
-    if (winWidth <= 500) {
-        responseWidth = slides.width();
-        responsiveGap = 0;
-    }
-    slideLayout(responseWidth, responsiveGap);
-    setSlidePos();
+    responseWidth = slides.width() - (responsiveGap * (maxSlides - 1)) / maxSlides;
+  } else {
+    responseWidth = slideWidth;
+    responsiveGap = slideGap;
+  }
+  if (winWidth <= 500) {
+    responseWidth = slides.width();
+    responsiveGap = 0;
+  }
+  slideLayout(responseWidth, responsiveGap);
+  setSlidePos();
 });
+
+// popup 창 띄우기
+
+$(document).ready(function () {
+  $('.artWork1').click(function () {
+    $('.artWork1_popup').show();
+    
+  });
+  $('.close').click(function () {
+    $('.artWork1_popup').hide();
+  });
+})
+
+
+
+
