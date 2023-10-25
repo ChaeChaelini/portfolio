@@ -866,6 +866,7 @@ h1 {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  position: relative;
 }
 
 /* 목업부분 */
@@ -1268,12 +1269,13 @@ footer {
   background-color: #fff;
   border: 3px solid #17aa9d;
   margin: auto;
-  display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 1rem;
   z-index: 9999;
-
+  position: absolute;
+  top: 0;
+  display: none;
 }
 
 .popup_bar {
@@ -1281,14 +1283,13 @@ footer {
   height: 2rem;
   background-color: #17aa9d;
   border-radius: 0.5rem 0.5rem 0 0;
+  display: flex;
+  justify-content: right;
 }
 
 .artWork1_popup .close {
-  position: absolute;
-  bottom: -358.3rem;
-  right: 34.1rem;
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   cursor: pointer;
   color: #fff;
   border: none;
@@ -1302,12 +1303,12 @@ footer {
 }
 
 .popup_wrap {
-  width: 38%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-items: left;
   gap: 1rem;
   padding: 1rem;
+  align-items: center;
 }
 
 .artWork1_popup ul {
