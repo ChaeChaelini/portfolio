@@ -1273,6 +1273,7 @@ footer {
   align-items: center;
   border-radius: 1rem;
   z-index: 9999;
+
 }
 
 .popup_bar {
@@ -1312,7 +1313,6 @@ footer {
 .artWork1_popup ul {
   display: flex;
   flex-direction: column;
-
   font-size: 1.5rem;
   font-weight: 500;
   color: #333;
