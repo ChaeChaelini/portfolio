@@ -37,11 +37,7 @@ win.on("scroll", function () {
       sections.eq(i).addClass("on").siblings().removeClass("on");
     }
   });
-  //if (sct > 400) {
-  //	$('nav').addClass('sticky');
-  //}else{
-  //  $('nav').removeClass('sticky');
-  //}
+
   sct > 400 ? $("nav").addClass("sticky") : $("nav").removeClass("sticky");
 });
 let speed = Math.floor(win.height() * 0.5);
@@ -207,22 +203,6 @@ function setSlidePos() {
   const ulMoveAmt = - moveAmt * slideCount;
   slides.css({ transform: `translateX(${ulMoveAmt}px)` });
 }
-//autoPlay 함수
-//이동함수
-// setInterval(() => {
-//     moveSlide();
-// }, 500);
-// function moveSlide() {
-//     currentIdx++;
-//     if (currentIdx > slideCount) {
-//         slides.css('left', 0)
-//         currentIdx = 0;
-//     }
-//     // slides.stop().animate({ left: moveAmt * -currentIdx }, 500);
-//     slides.stop().animate({ left: moveAmt * -currentIdx }, 500, function () {
-//         $('.clone').css('background', 'red')
-//     });
-// }
 
 //콜백을 활용한 이동함수
 //정지, 재생 함수

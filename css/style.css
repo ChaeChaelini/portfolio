@@ -16,7 +16,6 @@ body {
 body::-webkit-scrollbar {
   width: 1.2rem;
   background-color: white;
-  /* border: .2rem solid #17AA9D; */
 }
 
 body::-webkit-scrollbar-thumb {
@@ -29,7 +28,6 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-button {
   width: 2rem;
   height: 2rem;
-  /* background-color: #17AA9D; */
   border: 0.2rem solid #17aa9d;
   border-radius: 5rem;
 }
@@ -88,9 +86,16 @@ header {
   position: sticky;
 }
 
+.logo {
+  width: 11.3rem;
+  display: flex;
+  justify-content: center;
+}
+
 .logo img {
   width: 3.6875rem;
   height: 5.5625rem;
+
 }
 
 .menu_wrap {
@@ -106,11 +111,29 @@ header {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+
 }
 
 .menu:hover {
   color: #17aa9d;
   transition: all 0.5s;
+  cursor: pointer;
+}
+
+.contact {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #17aa9d;
+  padding: 1rem 2rem;
+  border: 3px solid #17aa9d;
+  border-radius: 3rem;
+  background-color: #fff;
+  transition: all 0.5s;
+}
+
+.contact:hover {
+  color: #fff;
+  background-color: #17aa9d;
   cursor: pointer;
 }
 
@@ -284,9 +307,6 @@ main {
 .contents_wrap {
   display: flex;
   width: 100%;
-  /* height: 283.4375rem; */
-  /* justify-content: center; */
-  /* padding: 6.25rem 0rem; */
   flex-direction: column;
   align-items: center;
   gap: 12.5rem;
@@ -541,10 +561,8 @@ h1 {
   top: 0;
   bottom: 0;
   right: 0;
-
   background-color: #17aa9d;
   width: 0;
-
   border-radius: 3rem;
   /* 틀만남고 안에 채워지는거 사라짐 */
 }
@@ -596,11 +614,9 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* gap: 4rem; */
 }
 
 /* ---------------------project_img */
-/*  */
 .project .project_wrap {
   position: relative;
   width: 100%;
@@ -627,7 +643,6 @@ h1 {
 .project .item.right {
   width: 40%;
   right: 0;
-  /* align-items: baseline; */
 }
 
 .left .mockup img,
@@ -700,35 +715,6 @@ h1 {
 }
 
 /*  */
-.project .project_wrap {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.project .item {
-  position: absolute;
-  top: 0;
-  height: 30vw;
-}
-
-.project .item.left {
-  width: 60%;
-  transition: left 1s ease-in-out;
-  left: -100%;
-}
-
-.project.is-animated .item.left {
-  left: 0%;
-  transition: left 2s ease-in-out;
-}
-
-.project .item.right {
-  width: 40%;
-  right: 0;
-  /* align-items: baseline; */
-}
-
 .left .mockup img,
 .left .mockup .mask {
   position: absolute;
@@ -886,7 +872,6 @@ h1 {
 .mockupbox {
   width: 50%;
   height: 100%;
-  /* overflow: auto; */
   position: relative;
 }
 
@@ -973,6 +958,13 @@ h1 {
   width: 100%;
 }
 
+.screen_pj4 {
+  z-index: 100;
+  position: relative;
+  width: 87%;
+  height: 100%;
+}
+
 /* /////카페in */
 .device {
   position: absolute;
@@ -988,15 +980,6 @@ h1 {
   height: 100%;
 }
 
-/* 카페in */
-.screen_pj4 {
-  z-index: 100;
-  position: relative;
-  width: 87%;
-  height: 100%;
-}
-
-/* /////카페in */
 .textbox_wrap1 {
   display: flex;
   flex-direction: column;
@@ -1336,9 +1319,7 @@ footer {
   gap: 0.5rem;
   width: 10rem;
   height: 8rem;
-  /* margin: auto; */
   text-align: left;
-  /* background-color: #aa9417; */
 }
 
 .artWork1_popup li {
