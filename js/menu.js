@@ -72,13 +72,14 @@ win.on("scroll", () => {
 });
 
 function pipScroll(params) {
-  const devices = [".mockup.pc", ".mockup.mobile", ".mockup.tablet"];
+  // const devices = [".mockup.pc", ".mockup.mobile", ".mockup.tablet"];
+  const devices = $('.mockup.pc,.mockup.mobile,.mockup.tablet');
 
-  $.each(devices, function (i, deviceEl) {
+  devices.each(function (i, deviceEl) {
 
-    const device = $(deviceEl);
-    const screen = device.find(".screen");
-    const mask = device.find(".mask");
+    let device = $(deviceEl);
+    let screen = device.find('.mask_screen>img');
+    const mask = device.find(".mask_screen");
     const hightDifference = screen.innerHeight() - mask.innerHeight();
     // console.log(hightDifference);
     device.on({
@@ -280,7 +281,7 @@ $(window).resize(function () {
 $(document).ready(function () {
   $('.artWork1').click(function () {
     $('.artWork1_popup').show();
-    
+
   });
   $('.close').click(function () {
     $('.artWork1_popup').hide();
