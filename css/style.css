@@ -743,12 +743,14 @@ h1 {
 }
 
 .project .mockup.pc .mask {
+  position: absolute;
   z-index: 8;
-  width: 25.2vw;
-  height: 57.4%;
+  width: 25.8vw;
+  height: 58.8%;
   overflow: hidden;
   left: 8%;
   top: 7.3%;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 /*--------------------------------------project_img */
@@ -759,30 +761,12 @@ h1 {
   height: 47rem;
   justify-content: center;
   align-items: center;
-  gap: 9.875rem;
+  gap: 10rem;
   align-self: stretch;
 }
 
-.textbox_wrap1 {
-  width: 26rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 1.875rem;
-  align-self: stretch;
-}
-
-.textbox_wrap2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 1.875rem;
-  align-self: stretch;
-}
-
-.title_sm {
+.title_sm2 {
+  padding: 0 0 0 7rem;
   color: #17aa9d;
   text-align: center;
   font-family: Pretendard;
@@ -792,7 +776,8 @@ h1 {
   line-height: normal;
 }
 
-.title_b {
+.title_b2 {
+  padding: 0 0 0 7rem;
   color: #333;
   text-align: center;
   font-family: Pretendard;
@@ -802,7 +787,8 @@ h1 {
   line-height: normal;
 }
 
-.list_wrap {
+.list_wrap2 {
+  padding: 0 0 0 7rem;
   width: 25rem;
   display: flex;
   flex-direction: column;
@@ -814,7 +800,8 @@ h1 {
   line-height: 2.67rem;
 }
 
-.button_wrap {
+.button_wrap2 {
+  padding: 0 0 0 7rem;
   width: 26rem;
   display: flex;
   justify-content: center;
@@ -883,9 +870,9 @@ h1 {
 
 .pc {
   position: absolute;
-  top: 24%;
-  left: 12%;
-  width: 80%;
+  top: 19%;
+  left: 3.8%;
+  width: 92%;
   height: 77%;
   overflow: hidden;
   z-index: 1;
@@ -893,9 +880,9 @@ h1 {
 
 .tablet {
   position: absolute;
-  top: 42%;
-  left: 70%;
-  width: 27%;
+  top: 39%;
+  left: 69.9%;
+  width: 30%;
   height: 72%;
   overflow: hidden;
   z-index: 2;
@@ -903,8 +890,7 @@ h1 {
 
 .mobile {
   position: absolute;
-  top: 45%;
-  left: 3.8rem;
+  top: 46%;
   width: 17%;
   height: 61%;
   overflow: hidden;
@@ -919,6 +905,7 @@ h1 {
   height: 100%;
 }
 
+/* 
 .pc .mask {
   position: absolute;
   top: 7%;
@@ -926,23 +913,24 @@ h1 {
   left: 1%;
   height: 80%;
   overflow: hidden;
-}
+} */
 
 .tablet .mask {
   position: absolute;
   top: 2.1%;
   width: 88%;
   left: 6%;
-  height: 45.3%;
+  height: 44.97%;
   overflow: hidden;
+  border-radius: 0.2rem;
 }
 
 .mobile .mask {
   position: absolute;
-  top: 6.5%;
+  top: 5.5%;
   width: 85.2%;
   left: 7.8%;
-  height: 40.8%;
+  height: 36.8%;
   overflow: hidden;
 }
 
@@ -982,6 +970,7 @@ h1 {
 }
 
 .textbox_wrap1 {
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -990,6 +979,7 @@ h1 {
 }
 
 .textbox_wrap2 {
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -999,6 +989,7 @@ h1 {
 }
 
 .title_sm {
+  padding: 0 7rem 0 0;
   color: #17aa9d;
   text-align: center;
   font-family: Pretendard;
@@ -1009,6 +1000,7 @@ h1 {
 }
 
 .title_b {
+  padding: 0 7rem 0 0;
   color: #333;
   text-align: center;
   font-family: Pretendard;
@@ -1019,6 +1011,7 @@ h1 {
 }
 
 .list_wrap {
+  padding: 0 7rem 0 0;
   width: 25rem;
   display: flex;
   flex-direction: column;
@@ -1031,6 +1024,7 @@ h1 {
 }
 
 .button_wrap {
+  padding: 0 7rem 0 0;
   width: 26rem;
   display: flex;
   justify-content: center;
