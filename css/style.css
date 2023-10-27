@@ -37,6 +37,7 @@ body::-webkit-scrollbar-button {
   z-index: -999;
   opacity: 40%;
 }
+
 /*----- scrollbar */
 #body_full {
   width: 100%;
@@ -1155,6 +1156,271 @@ footer {
 }
 
 /* //popup */
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+  /* -webkit-font-smoothing : 폰트 가장자리 계단현상 없애줌 */
+  -webkit-font-smoothing: antialised;
+}
+
+ul,
+il {
+  list-style: none;
+}
+
+.tab-wrapper {
+  max-width: 1000px;
+  margin: auto;
+  /* margin-top: 5rem; */
+}
+
+.tab-menu {
+  padding: 4rem 0;
+  width: 100%;
+  padding-left: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tab-menu li {
+  width: 11rem;
+  /* display: inline-block; */
+  list-style: none;
+  background: #ebebeb;
+  /* margin-right: 10px; */
+  border-radius: 2rem;
+  padding: 0.7rem;
+  border: 3px solid #17aa9d;
+  transition: all 0.5s;
+}
+
+.tab-menu li:hover {
+  background: #17aa9d;
+}
+
+.tab-menu li:hover a {
+  color: #fff;
+}
+
+.tab-menu li a {
+  color: #17aa9d;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 27px;
+  text-decoration: none;
+  display: block;
+  padding: 0 1.28rem;
+}
+
+.tab-menu li a.active {
+  /* background: #000; */
+  color: #17aa9d;
+}
+
+.tab-menu li a.active:hover {
+  color: #fff;
+}
+
+.tab-content {
+  position: relative;
+  min-height: 300px;
+  /* max-width: 800px; */
+
+}
+
+.tab-content>div {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  background-color: aqua;
+  padding: 1em;
+}
+
+.tab-content>div.active {
+  display: block;
+}
+
+#tab-1,
+#tab-2,
+#tab-3,
+#tab-4 {
+  width: 100%;
+  border-radius: 1.5rem;
+  border: 3px solid #17AA9D;
+  background: #FFF;
+  padding: 0;
+}
+
+.top_bar {
+  width: 100%;
+  height: 3rem;
+  border-radius: 1rem 1rem 0rem 0rem;
+  background: #17AA9D;
+  text-align: right;
+}
+
+.top_bar svg {
+  margin-right: 2rem;
+}
+
+.tab-1_content_box {
+  margin: auto;
+  width: 80%;
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.tab-2_content_box {
+  margin: auto;
+  width: 80%;
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.tab-3_content_box {
+  margin: auto;
+  width: 80%;
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.tab-1_content_box .img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.tab-2_content_box .img {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.img_text1 {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #000;
+  font-family: Pretendard;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.img_text2 {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.img_box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.img_box img {
+  background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+  box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.10);
+}
+
+.tab-2_content_box .txt1 {
+  text-align: center;
+  color: #666;
+  font-family: Pretendard;
+  font-size: 1.2rem;
+}
+
+/*  */
+.row {
+  width: 420px;
+  margin: 0 auto;
+}
+
+.row ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.row ul li {
+  display: inline-table;
+  width: 30%;
+}
+
+.row ul li img {
+  width: 100%;
+}
+
+/* 라이트 박스 스타일 */
+#lightbox {
+  position: fixed;
+  width: 100%;
+
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+/* 라이트 박스 안의 이미지 */
+#lightbox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #eee;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.all_scrollFixed {
+  overflow: hidden;
+}
+
+.all_scrollFixed::before {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 1000%;
+  height: 10000%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transform: translateX(-50%);
+  content: '';
+  z-index: 95;
+}
+
+#lightboxImage {
+  left: 50%;
+  transform: translateX(-50%);
+  position: fixed;
+  width: 80%;
+  height: 80vh;
+  overflow-y: auto;
+  top: 100px;
+}
+
+
 
 
 @media screen and (max-width: 1200px) {
