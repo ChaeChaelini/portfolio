@@ -4,11 +4,10 @@
 * {
   margin: 0;
   padding: 0;
+  /* -webkit-font-smoothing : 폰트 가장자리 계단현상 없애줌 */
+  -webkit-font-smoothing: antialised;
 }
 
-/* html {
-  cursor: none;
-} */
 body {
   overflow-x: hidden;
 }
@@ -32,6 +31,12 @@ body::-webkit-scrollbar-button {
   border-radius: 5rem;
 }
 
+#lottie {
+  position: absolute;
+  width: 60rem;
+  z-index: -999;
+  opacity: 40%;
+}
 /*----- scrollbar */
 #body_full {
   width: 100%;
@@ -171,15 +176,11 @@ main {
 }
 
 .banner_wrap {
-  padding-bottom: 5rem;
+  height: 29rem;
+  padding-bottom: 18rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: linear-gradient(180deg,
-      #fffffe 0%,
-      #fff 45.31%,
-      #fff 57.81%,
-      #fffffe 100%);
 }
 
 .profile {
@@ -629,119 +630,6 @@ h1 {
   height: 30vw;
 }
 
-.project .item.left {
-  width: 60%;
-  transition: left 1s ease-in-out;
-  left: -100%;
-}
-
-.project.is-animated .item.left {
-  left: 0%;
-  transition: left 2s ease-in-out;
-}
-
-.project .item.right {
-  width: 40%;
-  right: 0;
-}
-
-.left .mockup img,
-.left .mockup .mask {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.left .mockup.pc {
-  position: relative;
-  width: 135%;
-  height: 100%;
-  margin-left: 100%;
-}
-
-.screen,
-.device {
-  width: 100%;
-}
-
-.screen {
-  z-index: 3;
-}
-
-.device {
-  z-index: 4;
-}
-
-/* tablet */
-.left .mockup.tablet {
-  position: absolute;
-  width: 50%;
-  height: 60%;
-  /* margin-left: 100px; */
-  z-index: 9999;
-  top: 20%;
-  left: 13%;
-}
-
-.left .mockup.tablet .mask {
-  z-index: 999;
-  /* 마스크는 % */
-  width: 11.3vw;
-  height: 88.5%;
-  overflow: hidden;
-  top: 4.8%;
-  left: 5.8%;
-  border-radius: 5px;
-}
-
-/* mobile */
-.left .mockup.mobile {
-  position: relative;
-  width: 100%;
-  height: 60%;
-  top: -70%;
-  left: 100%;
-  z-index: 99;
-}
-
-.left .mockup.mobile .mask {
-  z-index: 999;
-  /* 마스크는 % */
-  width: 6.26vw;
-  height: 61.3%;
-  overflow: hidden;
-  top: 17.8%;
-  left: 37.8%;
-}
-
-/*  */
-.left .mockup img,
-.left .mockup .mask {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.left .mockup.pc {
-  position: relative;
-  width: 60%;
-  height: 100%;
-  margin-left: 100px;
-}
-
-.screen,
-.device {
-  width: 100%;
-}
-
-.screen {
-  z-index: 3;
-}
-
-.device {
-  z-index: 4;
-}
-
 .project .mockup.pc .mask {
   position: absolute;
   z-index: 8;
@@ -905,16 +793,6 @@ h1 {
   height: 100%;
 }
 
-/* 
-.pc .mask {
-  position: absolute;
-  top: 7%;
-  width: 98%;
-  left: 1%;
-  height: 80%;
-  overflow: hidden;
-} */
-
 .tablet .mask {
   position: absolute;
   top: 2.1%;
@@ -956,6 +834,7 @@ h1 {
 
 /* /////카페in */
 .device {
+  z-index: 4;
   position: absolute;
   top: 0;
   left: 0;
@@ -1030,52 +909,6 @@ h1 {
   justify-content: center;
   align-items: center;
   gap: 3.625rem;
-}
-
-.button {
-  display: flex;
-  padding: 1.4375rem 1.875rem;
-  justify-content: center;
-  align-items: center;
-  gap: 0.625rem;
-  border-radius: 2.1875rem;
-  border: 3px solid #17aa9d;
-  background: #fff;
-  color: #17aa9d;
-  text-align: center;
-  font-family: Pretendard;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-
-.button:hover {
-  display: flex;
-  padding: 1.4375rem 1.875rem;
-  justify-content: center;
-  align-items: center;
-  gap: 0.625rem;
-  color: #fff;
-  text-align: center;
-  font-family: Pretendard;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  border-radius: 2.1875rem;
-  background: #17aa9d;
-  transition: all 0.5s;
-}
-
-.gallery {
-  width: 100%;
-  height: 45rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
 }
 
 li {
