@@ -1227,25 +1227,85 @@ il {
   color: #fff;
 }
 
-.tab-content {
-  position: relative;
-  min-height: 300px;
-  /* max-width: 800px; */
 
-}
-
-.tab-content>div {
+#background{
+  position: fixed;
+  top : 0;
+  left : 0;
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
   display: none;
-  background-color: aqua;
-  padding: 1em;
+  border-radius: 1rem 1rem 0rem 0rem;
 }
-
-.tab-content>div.active {
-  display: block;
+#popup-content1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 80%;
+  background-color: transparent;
+  display: none;
+  overflow: auto;
+}
+#popup-content2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 80%;
+  background-color: white;
+  display: none;
+  overflow: auto;
+}
+#popup-content3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 80%;
+  background-color: white;
+  display: none;
+  overflow: auto;
+}
+#popup-content4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 80%;
+  background-color: white;
+  display: none;
+  overflow: auto;
+}
+.tab-contentbox{
+  margin: auto;
+  width: 90%;
+  height: 700px;
+  overflow: auto;  
+}
+.tab-contentbox{
+  ::-webkit-scrollbar {
+    width: 1.2rem;
+    background-color: white;
+  }
+  ::-webkit-scrollbar-thumb {
+    width: 1rem;
+    height: 1rem;
+    background: #17aa9d;
+    border-radius: 5rem;
+  }
+  ::-webkit-scrollbar-button {
+    width: 2rem;
+    height: 2rem;
+    border: 0.2rem solid #17aa9d;
+    border-radius: 5rem;
+  } 
 }
 
 #tab-1,
@@ -1271,32 +1331,6 @@ il {
   margin-right: 2rem;
 }
 
-.tab-1_content_box {
-  margin: auto;
-  width: 80%;
-  padding: 5rem 0;
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-}
-
-.tab-2_content_box {
-  margin: auto;
-  width: 80%;
-  padding: 5rem 0;
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-}
-
-.tab-3_content_box {
-  margin: auto;
-  width: 80%;
-  padding: 5rem 0;
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-}
 
 .tab-1_content_box .img {
   width: 100%;

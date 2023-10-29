@@ -289,31 +289,44 @@ $(window).resize(function () {
 // })
 
 // -----
-$(() => {
-  const tabWrapper = $('.tab-wrapper');
 
-  tabWrapper.each(function () {
-    let currentEl = $(this);
-    const targetLink = currentEl.find('.tab-menu a');
-    const tabContent = currentEl.find('.tab-content>div')
-    const close = $('.close');
+const artwork1 = document.getElementById('artwork1');
+const artwork2 = document.getElementById('artwork2');
+const artwork3 = document.getElementById('artwork3');
+const artwork4 = document.getElementById('artwork4');
+const popupcontent1 = document.getElementById('popup-content1')
+const popupcontent2 = document.getElementById('popup-content2')
+const popupcontent3 = document.getElementById('popup-content3')
+const popupcontent4 = document.getElementById('popup-content4')
+const background = document.getElementById('background');
+const closeBtn = document.getElementById('close');
 
-    targetLink.on('click', function (e) {
-      e.preventDefault();
-      let tg = $(this);
-      let currentLink = tg.attr("href");
-      tabContent.hide();
-      $(currentLink).slideDown();
-      targetLink.removeClass('active');
-      tg.addClass('active');
-
-    });
-
-  });
-
-  close.on('click', function () {
-    $('.tab-content_wrap').hide();
-  });s
-
+artwork1.addEventListener('click', ()=>{
+  background.style.display = 'flex';
+  popupcontent1.style.display = 'flex';
 });
+artwork2.addEventListener('click', ()=>{
+  background.style.display = 'flex';
+  popupcontent2.style.display = 'flex';
+});
+artwork3.addEventListener('click', ()=>{
+  background.style.display = 'flex';
+  popupcontent3.style.display = 'flex';
+});
+artwork4.addEventListener('click', ()=>{
+  background.style.display = 'flex';
+  popupcontent4.style.display = 'flex';
+});
+// closeBtn.addEventListener('click', () => {
+//   background.style.display = 'none';
+// });
+background.addEventListener('click' ,(event) =>{
+  if(event.target === background){
+    popupcontent1.style.display = 'none';
+    popupcontent2.style.display = 'none';
+    popupcontent3.style.display = 'none';
+    popupcontent4.style.display = 'none';
+    background.style.display = 'none';
+  }
+})
 
