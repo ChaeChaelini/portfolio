@@ -294,39 +294,60 @@ const artwork1 = document.getElementById('artwork1');
 const artwork2 = document.getElementById('artwork2');
 const artwork3 = document.getElementById('artwork3');
 const artwork4 = document.getElementById('artwork4');
-const popupcontent1 = document.getElementById('popup-content1')
-const popupcontent2 = document.getElementById('popup-content2')
-const popupcontent3 = document.getElementById('popup-content3')
-const popupcontent4 = document.getElementById('popup-content4')
+const popupcontent1 = document.getElementById('popup-content1');
+const popupcontent2 = document.getElementById('popup-content2');
+const popupcontent3 = document.getElementById('popup-content3');
+const popupcontent4 = document.getElementById('popup-content4');
 const background = document.getElementById('background');
 const closeBtn = document.getElementById('close');
 
-artwork1.addEventListener('click', ()=>{
+artwork1.addEventListener('click', () => {
   background.style.display = 'flex';
   popupcontent1.style.display = 'flex';
 });
-artwork2.addEventListener('click', ()=>{
+artwork2.addEventListener('click', () => {
   background.style.display = 'flex';
   popupcontent2.style.display = 'flex';
 });
-artwork3.addEventListener('click', ()=>{
+artwork3.addEventListener('click', () => {
   background.style.display = 'flex';
   popupcontent3.style.display = 'flex';
 });
-artwork4.addEventListener('click', ()=>{
+artwork4.addEventListener('click', () => {
   background.style.display = 'flex';
   popupcontent4.style.display = 'flex';
 });
 // closeBtn.addEventListener('click', () => {
 //   background.style.display = 'none';
 // });
-background.addEventListener('click' ,(event) =>{
-  if(event.target === background){
+background.addEventListener('click', (event) => {
+  if (event.target === background) {
     popupcontent1.style.display = 'none';
     popupcontent2.style.display = 'none';
     popupcontent3.style.display = 'none';
     popupcontent4.style.display = 'none';
     background.style.display = 'none';
   }
-})
+});
 
+const design1 = document.getElementById('design1');
+const design2 = document.getElementById('design2');
+const popupcontent01 = document.getElementById('popup-content1-1');
+const popupcontent02 = document.getElementById('popup-content1-2');
+
+design1.addEventListener('click', () => {
+  background.style.display = 'flex';
+  popupcontent01.style.display = 'flex';
+});
+design2.addEventListener('click', () => {
+  background.style.display = 'flex';
+  popupcontent02.style.display = 'flex';
+});
+background.addEventListener('click', (event) => {
+  if (event.target === background) {
+    popupcontent01.style.display = 'none';
+    popupcontent02.style.display = 'none';
+
+    background.style.display = 'none';
+  }
+});

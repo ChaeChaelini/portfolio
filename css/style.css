@@ -1099,6 +1099,7 @@ footer {
   width: 100%;
   gap: 2rem;
 }
+
 .design_section {
   display: flex;
   flex-direction: column;
@@ -1200,6 +1201,7 @@ il {
   justify-content: space-between;
 
 }
+
 .design-menu {
   padding: 4rem 0;
   width: 1000px;
@@ -1220,6 +1222,7 @@ il {
   border: 3px solid #17aa9d;
   transition: all 0.5s;
 }
+
 .design-menu li {
   width: 20rem;
   list-style: none;
