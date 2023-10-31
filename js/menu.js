@@ -73,12 +73,11 @@ win.on("scroll", () => {
 
 function pipScroll(params) {
   // const devices = [".mockup.pc", ".mockup.mobile", ".mockup.tablet"];
-  const devices = $('.mockup.pc,.mockup.mobile,.mockup.tablet');
+  const devices = $(".mockup.pc,.mockup.mobile,.mockup.tablet");
 
   devices.each(function (i, deviceEl) {
-
     let device = $(deviceEl);
-    let screen = device.find('.mask_screen>img');
+    let screen = device.find(".mask_screen>img");
     const mask = device.find(".mask_screen");
     const hightDifference = screen.innerHeight() - mask.innerHeight();
     // console.log(hightDifference);
@@ -149,20 +148,19 @@ $(function () {
   }
 }); //jQuery
 
-
-const slideWrapper = $('.slide_wrapper'); //최상위 부모
-const slides = slideWrapper.find('.slides'); // 이동할요소 (li의 부모 ul)
-const slide = slides.find('li'); // li 슬라이드
+const slideWrapper = $(".slide_wrapper"); //최상위 부모
+const slides = slideWrapper.find(".slides"); // 이동할요소 (li의 부모 ul)
+const slide = slides.find("li"); // li 슬라이드
 const slideCount = slide.length; //슬라이드의 총 갯수
 const slideWidth = slide.width(); //li 각각 너비
 const slideGap = 30; // li간격
-const nextBtn = slideWrapper.find('.next');
-const prevBtn = slideWrapper.find('.prev');
+const nextBtn = slideWrapper.find(".next");
+const prevBtn = slideWrapper.find(".prev");
 let currentIdx = 0; //초기값
 let moveAmt; //slideWidth+slideGap 이동거리
 let newSlides; //새 슬라이드 목록을 저장할 변수
-const pager = $('.pager');
-let pagerHTML = '';
+const pager = $(".pager");
+let pagerHTML = "";
 let maxSlides = 3;
 let responsiveGap = 20;
 let responseWidth;
@@ -173,7 +171,7 @@ slide.each(function (i) {
 });
 pager.html(pagerHTML);
 
-pager.find('a').on('click', function (e) {
+pager.find("a").on("click", function (e) {
   e.prevenDefault();
   let i = $(this).index();
   moveSlideCb(i);
@@ -183,25 +181,25 @@ pager.find('a').on('click', function (e) {
 cloneSlide();
 function cloneSlide() {
   //:after
-  slides.append(slide.clone().addClass('clone'));
+  slides.append(slide.clone().addClass("clone"));
   //:before
-  slides.prepend(slide.clone().addClass('clone'));
+  slides.prepend(slide.clone().addClass("clone"));
 }
 
 //슬라이드 배치함수
 slideLayout(slideWidth, slideGap);
 function slideLayout(sw, sm) {
   //li 가로배치
-  newSlides = $('.slide_wrapper li');
+  newSlides = $(".slide_wrapper li");
   moveAmt = sw + sm;
   newSlides.each(function (idx) {
-    $(this).css({ left: moveAmt * idx + 'px', width: sw + 'px' });
+    $(this).css({ left: moveAmt * idx + "px", width: sw + "px" });
   });
 }
 //ul 중앙정렬함수
-setSlidePos()
+setSlidePos();
 function setSlidePos() {
-  const ulMoveAmt = - moveAmt * slideCount;
+  const ulMoveAmt = -moveAmt * slideCount;
   slides.css({ transform: `translateX(${ulMoveAmt}px)` });
 }
 
@@ -222,19 +220,18 @@ function stopSlide() {
 
 function moveSlideCb(n) {
   //ㄱㅖ속 끊기지않고 실행되게 하는부분
-  if (slides.is(':animated')) {
+  if (slides.is(":animated")) {
     return;
   }
-  slides.stop().animate({ left: moveAmt * -n }, 800,
-    function () {
-      if (currentIdx > slideCount) {
-        slides.css('left', 0);
-        currentIdx = 0;
-      } else if (currentIdx < -(slideCount - 1)) {
-        slides.css('left', -moveAmt * slideCount)
-        currentIdx = slideCount;
-      }
-    });
+  slides.stop().animate({ left: moveAmt * -n }, 800, function () {
+    if (currentIdx > slideCount) {
+      slides.css("left", 0);
+      currentIdx = 0;
+    } else if (currentIdx < -(slideCount - 1)) {
+      slides.css("left", -moveAmt * slideCount);
+      currentIdx = slideCount;
+    }
+  });
   currentIdx = n;
   // console.log(currentIdx);
   // console.log(slideCount);
@@ -242,19 +239,21 @@ function moveSlideCb(n) {
 
 //이벤트핸들러 작성
 slideWrapper.on({
-  mouseenter: function () { stopSlide() },
-  mouseleave: function () { autoSlide() },
+  mouseenter: function () {
+    stopSlide();
+  },
+  mouseleave: function () {
+    autoSlide();
+  },
 });
 
-nextBtn.on('click', function () {
+nextBtn.on("click", function () {
   moveSlideCb(currentIdx + 1);
 });
-prevBtn.on('click', function () {
+prevBtn.on("click", function () {
   moveSlideCb(currentIdx - 1);
   // console.log(currentIdx);
 });
-
-
 
 //반응형함수
 $(window).resize(function () {
@@ -263,7 +262,8 @@ $(window).resize(function () {
   if (winWidth < 900) {
     responsiveGap = 10;
 
-    responseWidth = slides.width() - (responsiveGap * (maxSlides - 1)) / maxSlides;
+    responseWidth =
+      slides.width() - (responsiveGap * (maxSlides - 1)) / maxSlides;
   } else {
     responseWidth = slideWidth;
     responsiveGap = slideGap;
@@ -289,80 +289,78 @@ $(window).resize(function () {
 // })
 
 // -----
-const artwork1 = document.getElementById('artwork1');
-const artwork2 = document.getElementById('artwork2');
-const artwork3 = document.getElementById('artwork3');
-const artwork4 = document.getElementById('artwork4');
-const popupcontent1 = document.getElementById('popup-content1');
-const popupcontent2 = document.getElementById('popup-content2');
-const popupcontent3 = document.getElementById('popup-content3');
-const popupcontent4 = document.getElementById('popup-content4');
-const background = document.getElementById('background');
+const artwork1 = document.getElementById("artwork1");
+const artwork2 = document.getElementById("artwork2");
+const artwork3 = document.getElementById("artwork3");
+const artwork4 = document.getElementById("artwork4");
+const popupcontent1 = document.getElementById("popup-content1");
+const popupcontent2 = document.getElementById("popup-content2");
+const popupcontent3 = document.getElementById("popup-content3");
+const popupcontent4 = document.getElementById("popup-content4");
+const background = document.getElementById("background");
 // const closeBtn = document.getElementById('close');
 
-artwork1.addEventListener('click', () => {
-  background.style.display = 'flex';
-  popupcontent1.style.display = 'flex';
+artwork1.addEventListener("click", () => {
+  background.style.display = "flex";
+  popupcontent1.style.display = "flex";
 });
-artwork2.addEventListener('click', () => {
-  background.style.display = 'flex';
-  popupcontent2.style.display = 'flex';
+artwork2.addEventListener("click", () => {
+  background.style.display = "flex";
+  popupcontent2.style.display = "flex";
 });
-artwork3.addEventListener('click', () => {
-  background.style.display = 'flex';
-  popupcontent3.style.display = 'flex';
+artwork3.addEventListener("click", () => {
+  background.style.display = "flex";
+  popupcontent3.style.display = "flex";
 });
-artwork4.addEventListener('click', () => {
-  background.style.display = 'flex';
-  popupcontent4.style.display = 'flex';
+artwork4.addEventListener("click", () => {
+  background.style.display = "flex";
+  popupcontent4.style.display = "flex";
 });
 // closeBtn.addEventListener('click', () => {
 //   background.style.display = 'none';
 // });
-background.addEventListener('click', (event) => {
+background.addEventListener("click", (event) => {
   if (event.target === background) {
-    popupcontent1.style.display = 'none';
-    popupcontent2.style.display = 'none';
-    popupcontent3.style.display = 'none';
-    popupcontent4.style.display = 'none';
-    background.style.display = 'none';
+    popupcontent1.style.display = "none";
+    popupcontent2.style.display = "none";
+    popupcontent3.style.display = "none";
+    popupcontent4.style.display = "none";
+    background.style.display = "none";
   }
 });
 
-
-const design1 = document.getElementById('design1');
-const design2 = document.getElementById('design2');
-const popupcontent01 = document.getElementById('popup-content1-1');
-const popupcontent02 = document.getElementById('popup-content1-2');
-design1.addEventListener('click', () => {
-  background.style.display = 'flex';
-  popupcontent01.style.display = 'flex';
+const design1 = document.getElementById("design1");
+const design2 = document.getElementById("design2");
+const popupcontent01 = document.getElementById("popup-content1-1");
+const popupcontent02 = document.getElementById("popup-content1-2");
+design1.addEventListener("click", () => {
+  background.style.display = "flex";
+  popupcontent01.style.display = "flex";
 });
-design2.addEventListener('click', () => {
-  background.style.display = 'flex';
-  popupcontent02.style.display = 'flex';
+design2.addEventListener("click", () => {
+  background.style.display = "flex";
+  popupcontent02.style.display = "flex";
 });
-background.addEventListener('click', (e) => {
+background.addEventListener("click", (e) => {
   if (e.target === background) {
-    popupcontent01.style.display = 'none';
-    popupcontent02.style.display = 'none';
-    background.style.display = 'none';
+    popupcontent01.style.display = "none";
+    popupcontent02.style.display = "none";
+    background.style.display = "none";
   }
 });
-
 
 const pics = $(".pic");
 const lightbox = $("#lightbox");
 const lightboxImage = $("#lightboxImage");
 
-pics.on('click', function () {
+pics.on("click", function () {
   const bigLocation = $(this).attr("data-src");
   lightboxImage.load(bigLocation);
-  $('html').addClass('all_scrollFixed');
-  lightbox.css('display', 'block');
-})
+  $("html").addClass("all_scrollFixed");
+  lightbox.css("display", "block");
+});
 
-lightbox.on('click', function () {
-  lightbox.css('display', 'none');
-  $('html').removeClass('all_scrollFixed');
-})
+lightbox.on("click", function () {
+  lightbox.css("display", "none");
+  $("html").removeClass("all_scrollFixed");
+});
