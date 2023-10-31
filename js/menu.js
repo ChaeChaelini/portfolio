@@ -289,7 +289,6 @@ $(window).resize(function () {
 // })
 
 // -----
-
 const artwork1 = document.getElementById('artwork1');
 const artwork2 = document.getElementById('artwork2');
 const artwork3 = document.getElementById('artwork3');
@@ -299,13 +298,7 @@ const popupcontent2 = document.getElementById('popup-content2');
 const popupcontent3 = document.getElementById('popup-content3');
 const popupcontent4 = document.getElementById('popup-content4');
 const background = document.getElementById('background');
-const closeBtn = document.getElementById('close');
-
-
-const design1 = document.getElementById('design1');
-const design2 = document.getElementById('design2');
-const popupcontent01 = document.getElementById('popup-content1-1');
-const popupcontent02 = document.getElementById('popup-content1-2');
+// const closeBtn = document.getElementById('close');
 
 artwork1.addEventListener('click', () => {
   background.style.display = 'flex';
@@ -337,6 +330,10 @@ background.addEventListener('click', (event) => {
 });
 
 
+const design1 = document.getElementById('design1');
+const design2 = document.getElementById('design2');
+const popupcontent01 = document.getElementById('popup-content1-1');
+const popupcontent02 = document.getElementById('popup-content1-2');
 design1.addEventListener('click', () => {
   background.style.display = 'flex';
   popupcontent01.style.display = 'flex';
@@ -345,11 +342,27 @@ design2.addEventListener('click', () => {
   background.style.display = 'flex';
   popupcontent02.style.display = 'flex';
 });
-background.addEventListener('click', (event) => {
-  if (event.target === background) {
+background.addEventListener('click', (e) => {
+  if (e.target === background) {
     popupcontent01.style.display = 'none';
     popupcontent02.style.display = 'none';
-
     background.style.display = 'none';
   }
 });
+
+
+const pics = $(".pic");
+const lightbox = $("#lightbox");
+const lightboxImage = $("#lightboxImage");
+
+pics.on('click', function () {
+  const bigLocation = $(this).attr("data-src");
+  lightboxImage.load(bigLocation);
+  $('html').addClass('all_scrollFixed');
+  lightbox.css('display', 'block');
+})
+
+lightbox.on('click', function () {
+  lightbox.css('display', 'none');
+  $('html').removeClass('all_scrollFixed');
+})
