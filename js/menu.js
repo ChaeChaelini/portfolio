@@ -301,6 +301,12 @@ const popupcontent4 = document.getElementById('popup-content4');
 const background = document.getElementById('background');
 const closeBtn = document.getElementById('close');
 
+
+const design1 = document.getElementById('design1');
+const design2 = document.getElementById('design2');
+const popupcontent01 = document.getElementById('popup-content1-1');
+const popupcontent02 = document.getElementById('popup-content1-2');
+
 artwork1.addEventListener('click', () => {
   background.style.display = 'flex';
   popupcontent1.style.display = 'flex';
@@ -330,10 +336,6 @@ background.addEventListener('click', (event) => {
   }
 });
 
-const design1 = document.getElementById('design1');
-const design2 = document.getElementById('design2');
-const popupcontent01 = document.getElementById('popup-content1-1');
-const popupcontent02 = document.getElementById('popup-content1-2');
 
 design1.addEventListener('click', () => {
   background.style.display = 'flex';
