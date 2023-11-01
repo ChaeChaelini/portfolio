@@ -817,9 +817,6 @@ h1 {
 }
 
 /* 카페in */
-.project_item1 {
-  display: none;
-}
 
 .mask_screen_pj4 {
   position: absolute;
@@ -833,6 +830,37 @@ h1 {
   position: relative;
   width: 87%;
   height: 100%;
+}
+
+.figma {
+  position: relative;
+  width: 452px;
+  height: 916px;
+  background: url(../image/phone.jpg) no-repeat;
+  background-size: 100% 100%;
+  overflow: hidden;
+  z-index: 99999;
+}
+
+.crop {
+  position: absolute;
+  overflow: hidden;
+  width: 404px;
+  height: 877px;
+  top: 2%;
+  left: 6%;
+  border-radius: 49px;
+  z-index: -1;
+}
+
+iframe {
+  display: block;
+  position: absolute;
+  width: 502px;
+  height: 1051px;
+  left: -12.5%;
+  top: -7%;
+  z-index: 0;
 }
 
 /* /////카페in */
