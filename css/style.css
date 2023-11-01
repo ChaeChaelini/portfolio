@@ -311,13 +311,11 @@ main {
   align-items: center;
   gap: 12.5rem;
   flex-shrink: 0;
-  background: linear-gradient(
-    180deg,
-    #fffffe 0%,
-    #fff 45.31%,
-    #fff 57.81%,
-    #fffffe 100%
-  );
+  background: linear-gradient(180deg,
+      #fffffe 0%,
+      #fff 45.31%,
+      #fff 57.81%,
+      #fffffe 100%);
 }
 
 .textbox2 {
@@ -407,13 +405,13 @@ main {
   line-height: normal;
 }
 
-.tg > .about_content_big {
+.tg>.about_content_big {
   border: 2px solid #17aa9d;
   border-radius: 30px;
   padding: 0.5rem 1rem;
 }
 
-.tg > .about_content_big:hover {
+.tg>.about_content_big:hover {
   background-color: #17aa9d;
   color: #fff;
   transition: all 0.5s;
@@ -819,6 +817,10 @@ h1 {
 }
 
 /* 카페in */
+.project_item1 {
+  display: none;
+}
+
 .mask_screen_pj4 {
   position: absolute;
   top: 6.5%;
@@ -834,6 +836,8 @@ h1 {
 }
 
 /* /////카페in */
+
+
 .device {
   z-index: 4;
   position: absolute;
@@ -1005,13 +1009,11 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background: linear-gradient(
-    180deg,
-    #fffffe 0%,
-    #fff 45.31%,
-    #fff 57.81%,
-    #fffffe 100%
-  );
+  background: linear-gradient(180deg,
+      #fffffe 0%,
+      #fff 45.31%,
+      #fff 57.81%,
+      #fffffe 100%);
 }
 
 .contact_wrap {
@@ -1292,6 +1294,7 @@ li {
   position: relative;
   padding: 4rem 0;
 }
+
 .design-wrapper ul {
   width: 100%;
   display: flex;
@@ -1299,6 +1302,7 @@ li {
   /* gap: 10rem; */
   justify-content: space-between;
 }
+
 .design-wrapper li {
   width: 40%;
   height: 19rem;
@@ -1308,18 +1312,21 @@ li {
   border: 3px solid #17aa9d;
   text-align: center;
 }
+
 .design-wrapper li:first-child img {
   display: block;
   width: 18rem;
   margin: auto;
   margin-top: 3rem;
 }
+
 .design-wrapper li:last-child img {
   display: block;
   width: 18rem;
   margin: auto;
   margin-top: 1.7rem;
 }
+
 .tab-menu li:hover {
   background: #17aa9d;
 }
@@ -1344,6 +1351,7 @@ li {
 .tab-menu li a.active:hover {
   color: #fff;
 }
+
 /* 라이트 박스 스타일 */
 #lightbox {
   position: fixed;
