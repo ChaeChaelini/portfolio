@@ -758,32 +758,36 @@ h1 {
   justify-content: center;
   padding: 1rem;
 }
+
 .mockupbox4 {
   display: flex;
   width: 100%;
   height: 70%;
   justify-content: center;
   align-items: center;
-  
+
 }
+
 .pj4 {
   width: 100%;
   height: 100%;
 }
+
 .screen_pj4 {
   z-index: 100;
   position: relative;
   width: 100%;
 }
+
 .mask_screen_pj4 {
   z-index: 100;
   position: absolute;
-  top:10%;
+  top: 10%;
   left: 8%;
   width: 84%;
   height: 83%;
   overflow-y: hidden;
-  
+
 }
 
 .mockup {
@@ -822,8 +826,10 @@ h1 {
 
 .pj3 {
   display: flex;
-  width: 50%;
+  width: 100%;
   height: 100%;
+  margin: 10vh auto;
+  background-color: rgba(209, 203, 199, 0.401);
 }
 
 
@@ -853,41 +859,39 @@ h1 {
 
 /* 카페in */
 
-
-
-
+.mockup3_wrap {
+  width: 640px;
+  /* width: 100vh; */
+  margin: auto;
+  
+}
 
 .figma {
   position: relative;
-  width: 452px;
-  height: 916px;
-  background: url(../image/phone.jpg) no-repeat;
+  margin: auto;
+  width: 279px;
+  height: 563px;
+  background: url(../image/iPhone\ 8.png) no-repeat;
   background-size: 100% 100%;
   overflow: hidden;
-  z-index: 99999;
 }
 
 .crop {
   position: absolute;
   overflow: hidden;
-  width: 404px;
-  height: 877px;
-  top: 2%;
-  left: 6%;
-  border-radius: 49px;
-  z-index: -1;
+  width: 243px;
+  height: 434px;
+  left: 18px;
+  top: 65px;
 }
 
-.screen_cafe {
-  z-index: 100;
+.crop iframe {
+  display: block;
   position: absolute;
-  top: 10%;
-  left: 5%;
-  width: 90%;
-  height: 80%;
-
+  width: 243px;
+  height: 434px;
+  overflow: hidden;
 }
-
 /* /////카페in */
 
 .device {
@@ -912,6 +916,7 @@ h1 {
   justify-content: center;
   align-items: flex-end;
   gap: 1.875rem;
+  align-self: stretch;
 }
 
 .textbox_wrap2 {
