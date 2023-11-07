@@ -863,7 +863,7 @@ h1 {
   width: 640px;
   /* width: 100vh; */
   margin: auto;
-  
+
 }
 
 .figma {
@@ -892,6 +892,7 @@ h1 {
   height: 434px;
   overflow: hidden;
 }
+
 /* /////카페in */
 
 .device {
@@ -1476,6 +1477,80 @@ li {
   .progress-bar .rate {
     line-height: 1.1rem;
   }
+
+  .design-wrapper {
+    width: 500px;
+  }
+
+  .tab-wrapper {
+    width: 100%;
+  }
+
+  .tab-menu {
+    width: 500px;
+    margin: auto;
+    gap: 1rem;
+  }
+
+  .tab-menu li a {
+    width: 100%;
+    height: 144px;
+    margin: auto;
+  }
+
+  .tab-menu li img {
+    width: 80%;
+  }
+
+  .mockupbox {
+    width: 100%;
+  }
+
+  .mockupbox3 {
+    width: 60%;
+  }
+
+  .mockup3_wrap {
+    width: 50%;
+  }
+
+  .figma {
+    background-size: 50% 50%;
+    top: 101px;
+    left: 50px;
+  }
+
+  .crop {
+    width: 43.6%;
+    height: 38.3%;
+    left: 9px;
+    top: 33px;
+  }
+
+  .crop iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .project_item {
+    gap: 0;
+    padding: 10px;
+    align-self: center;
+  }
+
+  .project .mockup.pc .mask {
+    width: 84%;
+    height: 50%;
+  }
+
+  .tablet .mask {
+    height: 42%;
+  }
+
+  .mobile .mask {
+    height: 34.4%;
+  }
+
 }
 
 @media screen and (max-width: 360px) {
