@@ -17,7 +17,7 @@
 ![](https://github.com/ChaeChaelini/portfolio/assets/142187098/06a14011-f238-4701-92b7-6143f8c7679b)
 
 ## 프로토타입
-[🔗피그마 프로토타입 보러가기](https://www.figma.com/file/9lbkUTtwf0wtP9voKoL3YF/Untitled?type=design&node-id=259%3A1177&mode=design&t=I7BQHsRgZUTefKgZ-1)
+[🔗피그마 프로토타입 보러가기](https://www.figma.com/proto/9lbkUTtwf0wtP9voKoL3YF/Untitled?page-id=483%3A1348&type=design&node-id=483-1349&viewport=480%2C1551%2C0.4&t=8h5nmTc7SlMDVxGA-1&scaling=min-zoom&mode=design)
 
 ## 브라우저 호환성
 
