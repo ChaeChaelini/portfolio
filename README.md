@@ -6,22 +6,25 @@
 
 ## 콘셉트 도출
 >저를 브랜딩 하기 위해 마인드 맵으로 아이디어를 도출 해 보았습니다.
-![](https://github.com/ChaeChaelini/portfolio/assets/142187098/18272c35-dfa3-4424-ba56-a023131c8b7e)
+![](https://github.com/ChaeChaelini/portfolio/assets/142187098/29196bad-7559-4dc0-9b7a-9dc94346908c)
 
->키워드 3가지
-#### 푸른색 / 긍정적인 / 윤슬
+### 키워드 3가지
+#### 푸른색 / 긍정적인 / 유연한
 
 ## 스타일가이드
 >스타일가이드를 중심으로 작업하였습니다.
 
-![](https://github.com/ChaeChaelini/portfolio/assets/142187098/1bbfeb6e-f7fe-4069-a673-6fd675dc3f5f)
+![](https://github.com/ChaeChaelini/portfolio/assets/142187098/06a14011-f238-4701-92b7-6143f8c7679b)
 
 ## 프로토타입
 [🔗피그마 프로토타입 보러가기](https://www.figma.com/file/9lbkUTtwf0wtP9voKoL3YF/Untitled?type=design&node-id=259%3A1177&mode=design&t=I7BQHsRgZUTefKgZ-1)
 
 ## 브라우저 호환성
 
+## 사용기술
+#### HTML / CSS / JAVASCRIPT
 
 ## 정보
+김채린 / Portfolio url : [chaechaelini.github.io/portfolio/](chaechaelini.github.io/portfolio/) / e-mail : [kimbona0901@gmail.com](kimbona0901@gmail.com)
 
-이름 – [@트위터 주소](https://twitter.com/dbader_org) – 이메일주소@example.com
+### 🙇🏻‍♀️저의 포트폴리오를 봐주셔서 감사합니다🙇🏻‍♀️
