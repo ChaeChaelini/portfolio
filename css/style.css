@@ -861,9 +861,7 @@ h1 {
 
 .mockup3_wrap {
   width: 640px;
-  /* width: 100vh; */
   margin: auto;
-
 }
 
 .figma {
@@ -871,7 +869,7 @@ h1 {
   margin: auto;
   width: 279px;
   height: 563px;
-  background: url(../image/iPhone\ 8.png) no-repeat;
+  background: url(../image/phone.png) no-repeat;
   background-size: 100% 100%;
   overflow: hidden;
 }
