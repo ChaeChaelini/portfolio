@@ -4,7 +4,6 @@
 * {
   margin: 0;
   padding: 0;
-  /* -webkit-font-smoothing : 폰트 가장자리 계단현상 없애줌 */
   -webkit-font-smoothing: antialised;
 }
 
@@ -45,22 +44,12 @@ body::-webkit-scrollbar-button {
   margin: 0;
   padding: 0;
   border: none;
-
-  /* 배경 색상 지정 : 검정색 */
   background-color: #000000;
-
-  /* 포지션 지정 실시 : fixed 사용해 브라우저 전체 덮음 */
   position: fixed;
   top: 0%;
   left: 0%;
-
-  /* z-index 우선 순위 설정 : 다른 레이아웃 보다 크고, 팝업창 보단 작아야함 */
   z-index: 999999;
-
-  /* 투명도 조절 실시 */
   opacity: 0.5;
-
-  /* display 설정 : 표시 여부 */
   display: none;
 }
 
@@ -1400,7 +1389,6 @@ li {
 }
 
 .tab-menu li a.active {
-  /* background: #000; */
   color: #17aa9d;
 }
 
