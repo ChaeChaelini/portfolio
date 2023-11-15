@@ -497,8 +497,8 @@
         <h1>DESIGN</h1>
         <div class="design-wrapper">
           <ul>
-            <li> <img src="./image/logoMockup1.gif" data-src="design/design.html" class="pic"> </li>
-            <li> <img src="./image/logoMockup2.jpg" data-src="design/design.html" class="pic"> </li>
+            <li> <img src="./image/logoMockup1.gif" alt="목업1" data-src="design/design.html" class="pic"> </li>
+            <li> <img src="./image/logoMockup2.jpg" alt="목업2" data-src="design/design.html" class="pic"> </li>
           </ul>
           <div id="lightbox">
             <div id="lightboxImage"></div>
@@ -526,90 +526,94 @@
                 <div id="tab-1" class="active">
                   <div class="top_bar"> </div>
                   <div class="tab-1_content_box tab-contentbox">
-                    <img src="./image/artwork1.png" alt="전시1" width="100%">
+                    <img src="./image/artwork1.png" alt="전시1">
                   </div>
+                </div>
               </li>
               <!-- //tab-1 -->
               <li class="tab-content" id="popup-content2">
                 <div id="tab-2" class="active">
                   <div class="top_bar"> </div>
                   <div class="tab-2_content_box tab-contentbox">
-                    <img src="./image/artwork2.png" alt="전시2" width="100%">
+                    <img src="./image/artwork2.png" alt="전시2">
                   </div>
+                </div>
               </li>
               <!-- //tab-2 -->
               <li class="tab-content" id="popup-content3">
                 <div id="tab-3" class="active">
                   <div class="top_bar"> </div>
                   <div class="tab-3_content_box tab-contentbox">
-                    <img src="./image/artwork3.png" alt="전시3" width="100%">
+                    <img src="./image/artwork3.png" alt="전시3">
                   </div>
+                </div>
               </li>
               <!-- //tab-3 -->
               <li class="tab-content" id="popup-content4">
                 <div id="tab-4" class="active">
                   <div class="top_bar"> </div>
                   <div class="tab-3_content_box tab-contentbox">
-                    <img src="./image/artwork4.png" alt="전시4" width="100%">
+                    <img src="./image/artwork4.png" alt="전시4">
                   </div>
+                </div>
               </li>
               <!-- //tab-4 -->
 
             </ul>
           </div>
         </div>
+        <!-- </div> -->
+        <!-- //Art Work Popup -->
       </div>
-      <!-- //Art Work Popup -->
+    </main>
 
+    <footer>
 
+      <div class="contact_wrap" id="contact">
+        <div class="contactbox">
+          <img src="./image/Instagram.png" alt="인스타그램" />
+          <p>
+            <a href="https://instagram.com/chaechae_drawing_?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr"
+              target="_blank">@chaechae_drawing_
+            </a>
+          </p>
+        </div>
+        <div class="contactbox">
+          <img src="./image/Gmail.png" alt="이메일" />
+          <p>bona0901@naver.com</p>
+        </div>
+        <div class="contactbox">
+          <img src="./image/call.png" alt="전화번호" />
+          <p>010-9071-3674</p>
+        </div>
+      </div>
+      <div class="check_wrap">
+        <a href="https://validator.w3.org/check?uri=chaechaelini.github.io/portfolio/"><img
+            src="https://www.w3.org/Icons/valid-html401" alt="w3c_html"></a>
+        <a href="https://jigsaw.w3.org/css-validator/validator?uri=chaechaelini.github.io/portfolio/"><img
+            src="https://jigsaw.w3.org/css-validator/images/vcss" alt="w3c_css"></a>
+      </div>
+      <div class="textbox3">
+        <p>지금까지 김채린의 포트폴리오를 봐주셔서 감사합니다!</p>
+        <p>Copyright ⓒ 2023 ChaeLin All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="./js/menu.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+    <script>
+      var animation = bodymovin.loadAnimation({
+        container: document.getElementById('lottie'), // Required
+        path: './Animation - 1698387662974.json', // Required
+        renderer: 'svg', // Required
+        loop: true, // Optional
+        autoplay: true, // Optional            
+      })
+    </script>
   </div>
-
-  <footer>
-
-    <div class="contact_wrap" id="contact">
-      <div class="contactbox">
-        <img src="./image/Instagram.png" alt="인스타그램" />
-        <p>
-          <a href="https://instagram.com/chaechae_drawing_?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr"
-            target="_blank">@chaechae_drawing_
-          </a>
-        </p>
-      </div>
-      <div class="contactbox">
-        <img src="./image/Gmail.png" alt="이메일" />
-        <p>bona0901@naver.com</p>
-      </div>
-      <div class="contactbox">
-        <img src="./image/call.png" alt="전화번호" />
-        <p>010-9071-3674</p>
-      </div>
-    </div>
-    <div class="check_wrap">
-      <a href="https://validator.w3.org/check?uri=chaechaelini.github.io/portfolio/"><img
-          src="https://www.w3.org/Icons/valid-html401" alt="w3c_html"></a>
-      <a href="https://jigsaw.w3.org/css-validator/validator?uri=chaechaelini.github.io/portfolio/"><img
-          src="https://jigsaw.w3.org/css-validator/images/vcss" alt="w3c_css"></a>
-    </div>
-    <div class="textbox3">
-      <p>지금까지 김채린의 포트폴리오를 봐주셔서 감사합니다!</p>
-      <p>Copyright ⓒ 2023 ChaeLin All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-  <script src="./js/menu.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
-  <script>
-    var animation = bodymovin.loadAnimation({
-      container: document.getElementById('lottie'), // Required
-      path: './Animation - 1698387662974.json', // Required
-      renderer: 'svg', // Required
-      loop: true, // Optional
-      autoplay: true, // Optional            
-    })
-  </script>
 </body>
 
 </html>
