@@ -80,7 +80,6 @@ function pipScroll(params) {
     let screen = device.find(".mask_screen>img");
     const mask = device.find(".mask_screen");
     const hightDifference = screen.innerHeight() - mask.innerHeight();
-    // console.log(hightDifference);
     device.on({
       mouseenter: function () {
         if (project.hasClass("is-animated")) {
@@ -123,7 +122,6 @@ $(function () {
       const progressBar = $this.find(".bar");
       const progressText = $this.find(".rate");
       const progressRate = progressText.attr("data-rate"); //%의값
-      // console.log(progressRate);
       progressBar.stop().animate({ width: progressRate + "%" }, 2500); //''하고 단위붙여주기!
 
       const textFn = function () {
@@ -148,117 +146,10 @@ $(function () {
   }
 }); //jQuery
 
-const slideWrapper = $(".slide_wrapper"); //최상위 부모
-const slides = slideWrapper.find(".slides"); // 이동할요소 (li의 부모 ul)
-const slide = slides.find("li"); // li 슬라이드
-const slideCount = slide.length; //슬라이드의 총 갯수
-const slideWidth = slide.width(); //li 각각 너비
-const slideGap = 30; // li간격
-const nextBtn = slideWrapper.find(".next");
-const prevBtn = slideWrapper.find(".prev");
-let currentIdx = 0; //초기값
-let moveAmt; //slideWidth+slideGap 이동거리
-let newSlides; //새 슬라이드 목록을 저장할 변수
-const pager = $(".pager");
-let pagerHTML = "";
-let maxSlides = 3;
-let responsiveGap = 20;
-let responseWidth;
-
-//페이저버튼
-slide.each(function (i) {
-  pagerHTML += `<a href="#">${i + 1}`;
-});
-pager.html(pagerHTML);
-
-pager.find("a").on("click", function (e) {
-  e.prevenDefault();
-  let i = $(this).index();
-  moveSlideCb(i);
-});
-
-//슬라이드 복제함수
-cloneSlide();
-function cloneSlide() {
-  //:after
-  slides.append(slide.clone().addClass("clone"));
-  //:before
-  slides.prepend(slide.clone().addClass("clone"));
-}
-
-//슬라이드 배치함수
-slideLayout(slideWidth, slideGap);
-function slideLayout(sw, sm) {
-  //li 가로배치
-  newSlides = $(".slide_wrapper li");
-  moveAmt = sw + sm;
-  newSlides.each(function (idx) {
-    $(this).css({ left: moveAmt * idx + "px", width: sw + "px" });
-  });
-}
-//ul 중앙정렬함수
-setSlidePos();
-function setSlidePos() {
-  const ulMoveAmt = -moveAmt * slideCount;
-  slides.css({ transform: `translateX(${ulMoveAmt}px)` });
-}
-
-//콜백을 활용한 이동함수
-//정지, 재생 함수
-let timer = undefined;
-autoSlide();
-
-function autoSlide() {
-  timer = setInterval(() => {
-    moveSlideCb(currentIdx + 1);
-  }, 1000);
-}
-function stopSlide() {
-  clearInterval(timer);
-  timer = undefined;
-}
-
-function moveSlideCb(n) {
-  //ㄱㅖ속 끊기지않고 실행되게 하는부분
-  if (slides.is(":animated")) {
-    return;
-  }
-  slides.stop().animate({ left: moveAmt * -n }, 800, function () {
-    if (currentIdx > slideCount) {
-      slides.css("left", 0);
-      currentIdx = 0;
-    } else if (currentIdx < -(slideCount - 1)) {
-      slides.css("left", -moveAmt * slideCount);
-      currentIdx = slideCount;
-    }
-  });
-  currentIdx = n;
-  // console.log(currentIdx);
-  // console.log(slideCount);
-}
-
-//이벤트핸들러 작성
-slideWrapper.on({
-  mouseenter: function () {
-    stopSlide();
-  },
-  mouseleave: function () {
-    autoSlide();
-  },
-});
-
-nextBtn.on("click", function () {
-  moveSlideCb(currentIdx + 1);
-});
-prevBtn.on("click", function () {
-  moveSlideCb(currentIdx - 1);
-  // console.log(currentIdx);
-});
 
 //반응형함수
 $(window).resize(function () {
   let winWidth = $(this).width();
-  // console.log(winWidth);
   if (winWidth < 900) {
     responsiveGap = 10;
 
@@ -276,17 +167,6 @@ $(window).resize(function () {
   setSlidePos();
 });
 
-// popup 창 띄우기
-
-// $(document).ready(function () {
-//   $('.artWork1').click(function () {
-//     $('.artWork1_popup').show();
-
-//   });
-//   $('.close').click(function () {
-//     $('.artWork1_popup').hide();
-//   });
-// })
 
 // -----
 const artwork1 = document.getElementById("artwork1");
@@ -298,7 +178,6 @@ const popupcontent2 = document.getElementById("popup-content2");
 const popupcontent3 = document.getElementById("popup-content3");
 const popupcontent4 = document.getElementById("popup-content4");
 const background = document.getElementById("background");
-// const closeBtn = document.getElementById('close');
 
 artwork1.addEventListener("click", () => {
   background.style.display = "flex";
@@ -316,9 +195,7 @@ artwork4.addEventListener("click", () => {
   background.style.display = "flex";
   popupcontent4.style.display = "flex";
 });
-// closeBtn.addEventListener('click', () => {
-//   background.style.display = 'none';
-// });
+
 background.addEventListener("click", (event) => {
   if (event.target === background) {
     popupcontent1.style.display = "none";
@@ -329,26 +206,7 @@ background.addEventListener("click", (event) => {
   }
 });
 
-const design1 = document.getElementById("design1");
-const design2 = document.getElementById("design2");
-const popupcontent01 = document.getElementById("popup-content1-1");
-const popupcontent02 = document.getElementById("popup-content1-2");
-design1.addEventListener("click", () => {
-  background.style.display = "flex";
-  popupcontent01.style.display = "flex";
-});
-design2.addEventListener("click", () => {
-  background.style.display = "flex";
-  popupcontent02.style.display = "flex";
-});
-background.addEventListener("click", (e) => {
-  if (e.target === background) {
-    popupcontent01.style.display = "none";
-    popupcontent02.style.display = "none";
-    background.style.display = "none";
-  }
-});
-
+//
 const pics = $(".pic");
 const lightbox = $("#lightbox");
 const lightboxImage = $("#lightboxImage");
